@@ -45,3 +45,15 @@ jobs:
     - shell: bash
       run: | 
         java -jar greetings-actions.jar ${{ github.event.inputs.myValues }}
+  
+  count-args:
+  
+    runs-on: ubuntu-latest
+    
+    steps:
+    - id: report-count
+      uses: <your-github-user-id>/arg-count-action@main
+      with:
+        arguments-to-count: ${{ github.event.inputs.myValues }}
+        
+
