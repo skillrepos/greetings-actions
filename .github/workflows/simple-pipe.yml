@@ -49,7 +49,7 @@ jobs:
        
      steps:
      - id: report-count
-         uses: jeevanavani/arg-count-action@main
+         uses:jeevanavani/arg-count-action@main
          with:
          arguments-to-count: ${{ github.event.inputs.myValues }}
        - run: echo
