@@ -32,7 +32,7 @@ jobs:
       with:
         name: greetings-jar
         path: build/libs
-        
+
   test-run:
 
     runs-on: ubuntu-latest
@@ -46,3 +46,15 @@ jobs:
       - shell: bash
         run: |
           java -jar greetings-actions.jar ${{ github.event.inputs.myValues }} 
+
+  count-args:
+    runs-on: ubuntu-latest
+    steps:
+      - id: report-count
+        uses: brown285/arg-count-action@main
+        with:
+          arguments-to-count: ${{ github.event.inputs.myValues }}
+      - run: echo
+      - shell: bash
+        run: |
+          echo argument count is ${{ steps.report-count.outputs.arg-count }}
