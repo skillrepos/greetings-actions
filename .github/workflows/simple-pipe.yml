@@ -48,6 +48,7 @@ jobs:
         
   count-args:
     runs-on: ubuntu-latest
+
     steps:
       - id: report-count
         uses: Z/arg-count-action@main
