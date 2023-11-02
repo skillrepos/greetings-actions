@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: report-count
-        uses: doodad/arg-count-action@main
+        uses: sagehen03/arg-count-action@main
         with:
           arguments-to-count: ${{ github.event.inputs.myValues }}
       - run: echo
