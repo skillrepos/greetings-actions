@@ -13,6 +13,9 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
+    inputs:
+      myValues:
+        description: 'Values to pass to the jar'
 
 
 permissions:
